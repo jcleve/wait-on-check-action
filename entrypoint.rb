@@ -26,6 +26,8 @@ GithubChecksVerifier.configure do |config|
   config.verbose = verbose
   config.wait = wait.to_i
   config.workflow_name = workflow_name
+
+  puts "Repository: #{config.repo}"
 end
 
 GithubChecksVerifier.call
