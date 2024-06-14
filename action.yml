@@ -42,6 +42,9 @@ inputs:
     description: "Print logs if true"
     required: false
     default: true
+  repo:
+    description: "The repository to check against"
+    required: true
 
 runs:
   using: "composite"
@@ -78,6 +81,7 @@ runs:
         WAIT_INTERVAL: ${{ inputs.wait-interval }}
         RUNNING_WORKFLOW_NAME: ${{ inputs.running-workflow-name }}
         API_ENDPOINT: ${{ inputs.api-endpoint }}
+        GITHUB_REPOSITORY: ${{ inputs.repo }}
 branding:
   icon: "check-circle"
   color: "green"
